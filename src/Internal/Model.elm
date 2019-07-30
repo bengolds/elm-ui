@@ -2312,7 +2312,7 @@ optionsToRecord options =
 
 toStyleSheet : OptionRecord -> List Style -> VirtualDom.Node msg
 toStyleSheet options styleSheet =
-    VirtualDom.node "style" [] [ VirtualDom.text (toStyleSheetString options styleSheet) ]
+    VirtualDom.node "div" [] [ VirtualDom.node "style" [] [ VirtualDom.text (toStyleSheetString options styleSheet) ] ]
 
 
 renderTopLevelValues rules =
